@@ -20,7 +20,7 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
-  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-left-bold$$
   - {t: Mouse, h: toggle}
   - $$mdi:arrow-right-bold$$
   - H
@@ -314,7 +314,7 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
-  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-left-bold$$
   - {t: Winmous, h: toggle}
   - $$mdi:arrow-right-bold$$
   - H
