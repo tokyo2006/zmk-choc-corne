@@ -215,10 +215,10 @@
 
         Mouse {
             bindings = <
-&to 0   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP    &trans                       &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_DOWN  &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans          &trans     &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans          &mkp LCLK       &mkp RCLK                                    &trans  &trans  &trans
+&to 0   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans                       &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans     &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans          &mkp LCLK        &mkp RCLK                                    &trans  &trans  &trans
             >;
 
             label = "Mouse";
@@ -272,10 +272,10 @@
         Winmous {
             label = "Winmous";
             bindings = <
-&to 6   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP    &trans                       &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_DOWN  &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans          &trans     &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans          &mkp LCLK       &mkp RCLK                                    &trans  &trans  &trans
+&to 6   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans                       &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans     &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans          &mkp LCLK        &mkp RCLK                                    &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
