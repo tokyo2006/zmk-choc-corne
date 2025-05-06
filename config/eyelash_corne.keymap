@@ -144,7 +144,7 @@
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <18 23>;
+            key-positions = <18 22>;
         };
 
         flash {
@@ -273,7 +273,7 @@
             label = "Winmous";
             bindings = <
 &to 6   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans                       &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans               &trans  &to 6   &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans     &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans          &mkp LCLK        &mkp RCLK                                    &trans  &trans  &trans
             >;
@@ -287,6 +287,11 @@
 
         Flash {
             if-layers = <3 2>;
+            then-layer = <4>;
+        };
+
+        Winflash {
+            if-layers = <7 9>;
             then-layer = <4>;
         };
     };
