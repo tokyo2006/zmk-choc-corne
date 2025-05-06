@@ -511,7 +511,7 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Win, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -556,7 +556,7 @@ combos:
   k: '}'
 - p: [5, 7]
   k: {t: \, s: '|'}
-- p: [18, 23]
+- p: [18, 22]
   k: '|'
 - p: [12, 0]
   k: $$mdi:progress-download$$
