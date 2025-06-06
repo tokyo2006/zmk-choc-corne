@@ -156,19 +156,20 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Mac {
+        Qwery {
+            label = "Qwery";
             bindings = <
-&as TILDE GRAVE  &kp Q            &kp W            &kp E                &kp R              &kp T                                  &kp UP_ARROW                     &kp Y         &kp U               &kp I                 &kp O                    &kp P                &as PLUS EQUAL
-&kp CAPSLOCK     &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                  &kp LEFT_ARROW  &to 5           &kp RIGHT_ARROW  &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L         &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
-&to 6            &kp Z            &kp X            &kp C                &kp V              &kp B         &none                    &kp DOWN_ARROW                   &kp N         &kp M               &as LESS_THAN COMMA   &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp ENTER
-                                                   &ltq 1 BACKSPACE     &ltq 3 TAB         &ltq 2 SPACE                                                            &ltq 2 SPACE  &ltq 3 ENTER        &ltq 5 DELETE
+&as TILDE GRAVE  &kp Q                &kp W            &kp E             &kp R              &kp T                                  &kp UP_ARROW                     &kp Y         &kp U               &kp I                 &kp O                    &kp P                &as PLUS EQUAL
+&kp CAPSLOCK     &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_GUI D   &hml LEFT_SHIFT F  &kp G                  &kp LEFT_ARROW  &to 4           &kp RIGHT_ARROW  &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L         &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
+&kp ENTER        &kp Z                &kp X            &kp C             &kp V              &kp B         &none                    &kp DOWN_ARROW                   &kp N         &kp M               &as LESS_THAN COMMA   &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp ENTER
+                                                       &ltq 1 BACKSPACE  &ltq 3 TAB         &ltq 2 SPACE                                                            &ltq 2 SPACE  &ltq 3 ENTER        &ltq 4 DELETE
             >;
 
-            label = "Mac";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Navi {
+            label = "Navi";
             bindings = <
 &trans  &trans        &trans        &kp HOME          &kp PAGE_UP     &kp C_VOLUME_UP                      &trans          &kp C_BRIGHTNESS_INC  &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_DOWN            &trans  &trans  &trans  &kp C_BRI_DN          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
@@ -177,29 +178,38 @@
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
-            label = "Navi";
         };
 
         Symbol {
+            label = "Symbol";
             bindings = <
 &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH  &kp DOLLAR  &kp PERCENT                       &trans          &kp LCTRL  &kp AMPERSAND    &kp ASTERISK                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &kp ESCAPE       &kp CAPSLOCK  &kp HOME  &kp END     &kp UNDERSCORE            &trans  &trans  &trans  &kp MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP                     &kp PAGE_DOWN         &kp INSERT             &trans
 &trans  &kp BACKSPACE    &trans        &trans    &trans      &kp TILDE       &trans            &trans          &kp GRAVE  &as PLUS EQUAL   &as DOUBLE_QUOTES SINGLE_QUOTE  &as PIPE BACKSLASH    &kp DELETE             &trans
                                        &trans    &trans      &trans                                            &trans     &trans           &trans
             >;
-
-            label = "Symbol";
         };
 
-        Macmo {
+        Modifier {
+            label = "Modifier";
             bindings = <
-&kp LG(Q)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                        &trans          &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9   &kp NUMBER_0   &trans
-&trans     &kp LG(A)     &kp LG(S)     &kp LG(D)     &kp LG(F)     &kp LEFT_BRACKET            &trans  &trans  &trans  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_GUI  &trans
-&trans     &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LEFT_BRACE    &trans            &trans          &kp RIGHT_BRACE    &kp F1           &kp F2             &kp F3         &kp F4         &trans
+&kp LC(Q)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                        &trans          &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9   &kp NUMBER_0   &trans
+&trans     &kp LC(A)     &kp LC(S)     &kp LC(D)     &kp LC(F)     &kp LEFT_BRACKET            &trans  &trans  &trans  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_GUI  &trans
+&trans     &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LEFT_BRACE    &trans            &trans          &kp RIGHT_BRACE    &kp F1           &kp F2             &kp F3         &kp F4         &trans
                                        &trans        &trans        &trans                                              &trans             &trans           &trans
             >;
+        };
 
-            label = "Macmo";
+        Mouse {
+            label = "Mouse";
+            bindings = <
+&to 0   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans                       &trans          &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans               &trans  &to 0   &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans     &trans            &trans          &trans     &trans     &trans  &trans  &trans  &trans
+                                &trans          &mkp LCLK        &mkp RCLK                                    &mkp LCLK  &mkp RCLK  &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
         Flash {
@@ -212,87 +222,19 @@
 
             label = "Flash";
         };
-
-        Mouse {
-            bindings = <
-&to 0   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans                       &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans     &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans          &mkp LCLK        &mkp RCLK                                    &trans  &trans  &trans
-            >;
-
-            label = "Mouse";
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        Win {
-            label = "Win";
-            bindings = <
-&as TILDE GRAVE  &kp Q                &kp W            &kp E             &kp R              &kp T                                  &kp UP_ARROW                     &kp Y         &kp U               &kp I                 &kp O                    &kp P                &as PLUS EQUAL
-&kp CAPSLOCK     &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_GUI D   &hml LEFT_SHIFT F  &kp G                  &kp LEFT_ARROW  &to 10          &kp RIGHT_ARROW  &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L         &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
-&to 0            &kp Z                &kp X            &kp C             &kp V              &kp B         &none                    &kp DOWN_ARROW                   &kp N         &kp M               &as LESS_THAN COMMA   &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp ENTER
-                                                       &ltq 7 BACKSPACE  &ltq 9 TAB         &ltq 8 SPACE                                                            &ltq 8 SPACE  &ltq 9 ENTER        &ltq 10 DELETE
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        };
-
-        Winnavi {
-            label = "Winnavi";
-            bindings = <
-&trans  &trans        &trans        &kp HOME          &kp PAGE_UP     &kp C_VOLUME_UP                      &trans          &kp C_BRIGHTNESS_INC  &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_DOWN            &trans  &trans  &trans  &kp C_BRI_DN          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans        &trans        &kp END           &kp PAGE_DOWN   &kp K_MUTE         &trans            &trans          &kp C_BRI_AUTO        &trans          &trans          &trans           &trans  &trans
-                                    &trans            &trans          &trans                                               &trans                &trans          &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
-        };
-
-        Winsym {
-            label = "Winsym";
-            bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH  &kp DOLLAR  &kp PERCENT                       &trans          &kp LCTRL  &kp AMPERSAND    &kp ASTERISK                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp ESCAPE       &kp CAPSLOCK  &kp HOME  &kp END     &kp UNDERSCORE            &trans  &trans  &trans  &kp MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP                     &kp PAGE_DOWN         &kp INSERT             &trans
-&trans  &kp BACKSPACE    &trans        &trans    &trans      &kp TILDE       &trans            &trans          &kp GRAVE  &as PLUS EQUAL   &as DOUBLE_QUOTES SINGLE_QUOTE  &as PIPE BACKSLASH    &kp DELETE             &trans
-                                       &trans    &trans      &trans                                            &trans     &trans           &trans
-            >;
-        };
-
-        Winmodi {
-            label = "Winmodi";
-            bindings = <
-&kp LC(Q)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                        &trans          &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9   &kp NUMBER_0   &trans
-&trans     &kp LC(A)     &kp LC(S)     &kp LC(D)     &kp LC(F)     &kp LEFT_BRACKET            &trans  &trans  &trans  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_GUI  &trans
-&trans     &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LEFT_BRACE    &trans            &trans          &kp RIGHT_BRACE    &kp F1           &kp F2             &kp F3         &kp F4         &trans
-                                       &trans        &trans        &trans                                              &trans             &trans           &trans
-            >;
-        };
-
-        Winmous {
-            label = "Winmous";
-            bindings = <
-&to 6   &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans                       &trans          &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans               &trans  &to 6   &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans     &trans            &trans          &trans     &trans     &trans  &trans  &trans  &trans
-                                &trans          &mkp LCLK        &mkp RCLK                                    &mkp LCLK  &mkp RCLK  &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         Flash {
-            if-layers = <3 2>;
-            then-layer = <4>;
+            if-layers = <5 5>;
+            then-layer = <5>;
         };
 
         Winflash {
-            if-layers = <7 9>;
-            then-layer = <4>;
+            if-layers = <1 3>;
+            then-layer = <5>;
         };
     };
 };
