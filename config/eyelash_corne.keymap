@@ -240,12 +240,7 @@
         compatible = "zmk,conditional-layers";
 
         Flash {
-            if-layers = <5 5>;
-            then-layer = <5>;
-        };
-
-        Winflash {
-            if-layers = <1 3>;
+            if-layers = <2 3>;
             then-layer = <5>;
         };
     };
