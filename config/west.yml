@@ -48,5 +48,9 @@ manifest:
     - name: zmk-nice-oled
       remote: tokyo2006
       revision: "4.0"
+    - name: zmk-feature-runtime-macro
+      import: true
+    - name: zmk-feature-runtime-combo
+      import: true
   self:
     path: config
