@@ -246,7 +246,7 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - {type: held}
   Flash:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&studio_unlock'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
