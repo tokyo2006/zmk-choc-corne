@@ -9,3 +9,14 @@ include:
     shield: eyelash_corne_right nice_epaper
   - board: eyelash_nano
     shield: settings_reset
+  # DEBUG ONLY: bisection build to isolate the "keyboard unresponsive" issue.
+  # No display, no Studio, no runtime macro/combo - just kscan + keymap + logging.
+  - board: eyelash_nano
+    shield: eyelash_corne_left
+    snippet: zmk-usb-logging
+    cmake-args: >-
+      -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=1000
+      -DCONFIG_ZMK_RUNTIME_MACRO=n
+      -DCONFIG_ZMK_RUNTIME_COMBO=n
+      -DCONFIG_ZMK_STUDIO=n
+    artifact-name: eyelash_corne_debug_bare_left
