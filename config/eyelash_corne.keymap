@@ -107,42 +107,42 @@
             slot = <1>;
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <3 4>;
-            display-name = "[";
+            display-name = "Left Bracket";
         };
 
         combo_right_bkt {
             slot = <2>;
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <9 8>;
-            display-name = "]";
+            display-name = "Right Bracket";
         };
 
         combo_left_par {
             slot = <3>;
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 17>;
-            display-name = "(";
+            display-name = "Left Paren";
         };
 
         combo_right_par {
             slot = <4>;
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <24 23>;
-            display-name = ")";
+            display-name = "Right Paren";
         };
 
         combo_left_brace {
             slot = <5>;
             bindings = <&kp LEFT_BRACE>;
             key-positions = <31 32>;
-            display-name = "{";
+            display-name = "Left Brace";
         };
 
         combo_right_brace {
             slot = <6>;
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <37 38>;
-            display-name = "}";
+            display-name = "Right Brace";
         };
 
         combo_bac {
