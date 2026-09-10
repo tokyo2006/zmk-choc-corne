@@ -2,8 +2,8 @@
 include:
   - board: eyelash_nano
     shield: eyelash_corne_left nice_epaper
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    snippet: studio-rpc-usb-uart zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
     artifact-name: eyelash_corne_studio_left
   - board: eyelash_nano
     shield: eyelash_corne_right nice_epaper
