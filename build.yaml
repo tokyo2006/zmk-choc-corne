@@ -2,6 +2,9 @@
 include:
   - board: eyelash_nano
     shield: eyelash_corne_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: eyelash_corne_studio_left
   - board: eyelash_nano
     shield: eyelash_corne_right
   - board: eyelash_nano
