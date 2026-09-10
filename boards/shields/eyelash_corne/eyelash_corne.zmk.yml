@@ -1,9 +1,10 @@
 file_format: "1"
 id: eyelash_corne
 name: Eyelash Corne
-url: https://github.com/a741725193/zmk-new_corne
-type: board
-arch: arm
+type: shield
+url: https://github.com/tokyo2006/zmk-choc-corne
+requires:
+  - eyelash_nano
 features:
   - keys
   - display

@@ -1,19 +1,56 @@
 manifest:
+  version: 1.2
+  defaults:
+    remote: cormoran
+    revision: main
   remotes:
+    - name: cormoran
+      url-base: https://github.com/cormoran
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: gpeye
-      url-base: https://github.com/GPeye
+    - name: eyelash
+      url-base: https://github.com/a741725193
+    - name: tokyo2006
+      url-base: https://github.com/tokyo2006
   projects:
-    - name: eyelash_corne
-      url: https://github.com/a741725193/zmk-new_corne
-      revision: main
-    - name: hammerbeam-slideshow
-      remote: gpeye
-      revision: main 
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: cormoran
       import: app/west.yml
+      revision: main+dya
+      clone-depth: 1
+    - name: zephyr
+      remote: cormoran
+      revision: v4.1.0+zmk-fixes+nrf-half-duplex-uart
+      clone-depth: 1
+      import:
+        name-blocklist:
+          - ci-tools
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_xtensa
+          - hal_st
+          - hal_ti
+          - loramac-node
+          - mcuboot
+          - mcumgr
+          - net-tools
+          - openthread
+          - edtt
+          - trusted-firmware-m
+          - chre
+    - name: zmk-board-eyelash
+      remote: eyelash
+      revision: v4.0
+    - name: zmk-nice-oled
+      remote: tokyo2006
+      revision: "4.0"
+    - name: zmk-feature-runtime-macro
+      import: true
+    - name: zmk-feature-runtime-combo
+      import: true
   self:
     path: config

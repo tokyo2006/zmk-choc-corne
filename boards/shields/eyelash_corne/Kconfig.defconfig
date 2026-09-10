@@ -1,0 +1,82 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_EYELASH_CORNE_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Eyelash Corne"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+# DYA Studio Level 2: Macro / Combo tabs (central only)
+config ZMK_RUNTIME_MACRO
+    default y
+
+config ZMK_RUNTIME_MACRO_STUDIO_RPC
+    default y
+
+config ZMK_RUNTIME_COMBO
+    default y
+
+config ZMK_RUNTIME_COMBO_STUDIO_RPC
+    default y
+
+# 10 combos migrated from the old zmk,combos node; default cap is 8
+config ZMK_RUNTIME_COMBO_MAX_COMBOS
+    default 16
+
+# Stack/buffer baseline for running multiple Studio RPC feature modules
+config ZMK_LOW_PRIORITY_THREAD_STACK_SIZE
+    default 4096
+
+config ZMK_STUDIO_RPC_RX_BUF_SIZE
+    default 256
+
+config ZMK_STUDIO_RPC_TX_BUF_SIZE
+    default 256
+
+config ZMK_STUDIO_RPC_CUSTOM_SUBSYSTEM_REQUEST_PAYLOAD_MAX_BYTES
+    default 256
+
+# ZMK_RUNTIME_MACRO stores macro bodies through ZMK_CUSTOM_SETTINGS (a
+# transitive dependency pulled in by import: true); its default 64-byte
+# ceiling clamps ZMK_RUNTIME_MACRO_MAX_BYTES's 256-byte default down to
+# 64 and turns that into a fatal Kconfig warning, so raise it here.
+config ZMK_CUSTOM_SETTINGS_LARGE_VALUE_MAX_SIZE
+    default 256
+
+config ZMK_STUDIO_RPC_THREAD_STACK_SIZE
+    default 6000
+
+config SYSTEM_WORKQUEUE_STACK_SIZE
+    default 4096
+
+endif # SHIELD_EYELASH_CORNE_LEFT
+
+if SHIELD_EYELASH_CORNE_RIGHT
+
+config ZMK_USB
+    default n
+
+endif # SHIELD_EYELASH_CORNE_RIGHT
+
+if SHIELD_EYELASH_CORNE_LEFT || SHIELD_EYELASH_CORNE_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+config BT_CTLR
+    default BT
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
+
+endif # SHIELD_EYELASH_CORNE_LEFT || SHIELD_EYELASH_CORNE_RIGHT
