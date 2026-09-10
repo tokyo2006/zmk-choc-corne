@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: eyelash
       url-base: https://github.com/a741725193
+    - name: tokyo2006
+      url-base: https://github.com/tokyo2006
   projects:
     - name: zmk
       remote: cormoran
@@ -43,5 +45,8 @@ manifest:
     - name: zmk-board-eyelash
       remote: eyelash
       revision: v4.0
+    - name: zmk-nice-oled
+      remote: tokyo2006
+      revision: "4.0"
   self:
     path: config
