@@ -2,18 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: gpeye
-      url-base: https://github.com/GPeye
+    - name: eyelash
+      url-base: https://github.com/a741725193
   projects:
-    - name: eyelash_corne
-      url: https://github.com/a741725193/zmk-new_corne
-      revision: main
-    - name: hammerbeam-slideshow
-      remote: gpeye
-      revision: main 
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-board-eyelash
+      remote: eyelash
+      revision: v4.0
   self:
     path: config
