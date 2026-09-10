@@ -1,7 +1,7 @@
 ---
 include:
   - board: eyelash_nano
-    shield: eyelash_corne_left nice_epaper
+    shield: eyelash_corne_left nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: >-
       -DCONFIG_ZMK_STUDIO=y
