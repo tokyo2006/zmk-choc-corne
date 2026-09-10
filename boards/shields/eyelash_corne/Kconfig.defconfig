@@ -39,6 +39,13 @@ config ZMK_STUDIO_RPC_TX_BUF_SIZE
 config ZMK_STUDIO_RPC_CUSTOM_SUBSYSTEM_REQUEST_PAYLOAD_MAX_BYTES
     default 256
 
+# ZMK_RUNTIME_MACRO stores macro bodies through ZMK_CUSTOM_SETTINGS (a
+# transitive dependency pulled in by import: true); its default 64-byte
+# ceiling clamps ZMK_RUNTIME_MACRO_MAX_BYTES's 256-byte default down to
+# 64 and turns that into a fatal Kconfig warning, so raise it here.
+config ZMK_CUSTOM_SETTINGS_LARGE_VALUE_MAX_SIZE
+    default 256
+
 config ZMK_STUDIO_RPC_THREAD_STACK_SIZE
     default 6000
 
