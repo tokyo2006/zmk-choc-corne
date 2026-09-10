@@ -3,10 +3,14 @@ include:
   - board: eyelash_nano
     shield: eyelash_corne_left nice_epaper
     snippet: studio-rpc-usb-uart zmk-usb-logging
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+    cmake-args: >-
+      -DCONFIG_ZMK_STUDIO=y
+      -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+      -DCONFIG_ZMK_DISPLAY_DEDICATED_THREAD_STACK_SIZE=4096
     artifact-name: eyelash_corne_studio_left
   - board: eyelash_nano
     shield: eyelash_corne_right nice_epaper
+    cmake-args: -DCONFIG_ZMK_DISPLAY_DEDICATED_THREAD_STACK_SIZE=4096
   - board: eyelash_nano
     shield: settings_reset
   # DEBUG ONLY: bisection build to isolate the "keyboard unresponsive" issue.
@@ -30,4 +34,5 @@ include:
       -DCONFIG_ZMK_RUNTIME_MACRO=n
       -DCONFIG_ZMK_RUNTIME_COMBO=n
       -DCONFIG_ZMK_STUDIO=n
+      -DCONFIG_ZMK_DISPLAY_DEDICATED_THREAD_STACK_SIZE=4096
     artifact-name: eyelash_corne_debug_display_left
